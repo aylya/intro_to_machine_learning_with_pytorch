@@ -6,7 +6,24 @@ You are required to download and install the following free softwares for this w
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Git Version Control System](https://git-scm.com/)
 
-## Setting up your conda environment
+
+## Setting up your conda environment from environment.yml
+
+
+```
+conda env create -f environment.yml
+
+```
+
+## Activate
+
+
+```
+conda activate pytorch
+```
+
+
+## Setting up your conda environment step by step
 
 When you download and install Anaconda, you are also installing the latest version of Python, Jupyter Notebooks and several useful data science libarries which are essential for data manipulation and developing machine learning applications.
 
@@ -14,8 +31,9 @@ Main benefit of using Anaconda is having the ability to setup up your own develo
 
 To create a new environment, start the `Anaconda Prompt` and execute the following code to create your own  environment.
 
+
 ```conda
-conda create --name my_env
+conda create -n pytorch python=3.7
 
 Solving environment: done
 ## Package Plan ##
@@ -30,7 +48,7 @@ Proceed ([y]/n)? y
 You can test that you have successfully created a new environment by activating it using:
 
 ```conda
-conda activate my_env
+conda activate pytorch
 
 (my_env) C:\Users\Username>
 ```
@@ -38,7 +56,7 @@ conda activate my_env
 Then, you can check what packages have been already installed within your environment using:
 
 ```conda
-conda list my_env
+conda list pytorch
 
 # packages in environment at C:\Users\Username\Anaconda3\envs\my_env:
 #
@@ -58,6 +76,7 @@ zlib                      1.2.11               h62dcd97_3
 ```
 
 Once you environment is set, and you have it activated, simply run the following commands to install all the required packages for this workshop.
+
 
 #### Installing Numpy
 
@@ -99,6 +118,10 @@ You can also try importing `torch` and `torchvision` packages. If you don't get 
 
 Open the `Anaconda Navigator` then select your newly created environment `my_env` from the top drop down menu on the main page, then press the `install` button underneath the Jupyter Notebooks card. When installed, press the `launch` button to start the Jupyter notebooks on your browser. Simply navigate to the notebook files we have provided in this repo to open the notebook.
 
+```
+conda install -c conda-forge jupyterlab
+
+```
 ## Starting VS Code via Anaconda Navigator
 
 To ensure your VS code is configured to your environment `my_env`, simply launch VS Code via `Anaconda Navigator` while having your environment selected from the drop down menu.
